@@ -17,7 +17,7 @@ public protocol BackingViewProvider {
 
 /// StatefulViewController protocol may be adopted by a view controller or a view in order to transition to
 /// error, loading or empty views.
-public protocol StatefulViewController: class, BackingViewProvider {
+public protocol StatefulViewController: AnyObject, BackingViewProvider {
     /// The view state machine backing all state transitions
     var stateMachine: ViewStateMachine { get }
 
